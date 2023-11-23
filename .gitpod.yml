@@ -1,0 +1,13 @@
+image:
+  file: Dockerfile
+
+tasks:
+  - init: |
+      ./waf configure
+      python -m pip install empy
+      python -m pip install pexpect
+      pip install future
+    command: |
+      echo "To set up Pixhawk4 + Rover, run the following commands:"
+      echo "./waf configure --board Pixhawk4"
+      echo "./waf rover"
