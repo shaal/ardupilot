@@ -1,8 +1,9 @@
+
 image:
   file: Dockerfile
 
 tasks:
-  - init: |
+  - before: |
       ./waf configure
       python -m pip install empy
       python -m pip install pexpect
@@ -11,3 +12,15 @@ tasks:
       echo "To set up Pixhawk4 + Rover, run the following commands:"
       echo "./waf configure --board Pixhawk4"
       echo "./waf rover"
+
+vscode:
+  extensions:
+    - augustocdias.tasks-shell-input
+    - bierner.markdown-mermaid
+    - ms-vscode.cpptools
+    - sumneko.lua
+    - ms-python.python
+    - ms-python.vscode-pylance
+    - streetsidesoftware.code-spell-checker
+    - chiehyu.vscode-astyle
+    - ardupilot-org.ardupilot-devenv
